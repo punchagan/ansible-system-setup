@@ -1,6 +1,10 @@
 # Ansible System Setup
 
-Repository to bootstrap and setup my laptop and other machines
+Repository to bootstrap and setup my laptop and other machines.
+
+This repository is based on the design
+[here](https://github.com/LearnLinuxTV/personal_ansible_desktop_configs) and
+[this tutorial](https://www.youtube.com/watch?v=gIDywsGBqf4)
 
 
 ## Bootstrap
