@@ -7,4 +7,8 @@ URL=https://github.com/punchagan/ansible-system-setup.git
 # Install Ansible (ansible-pull) and Git
 (which ansible-pull && which git) || (sudo apt update && sudo apt install -y ansible git)
 
+# Create ansible log directory
+# NOTE: Ensure it is the same as the log path in ansible.cfg
+mkdir -p ~/.local/var/log/
+
 ansible-pull -o -U "${URL}"
