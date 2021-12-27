@@ -1,0 +1,8 @@
+- name: system setup | repositories | install package management tools (debian-based)
+  tags: packages,system,settings
+  package:
+    name:
+      - aptitude
+      - software-properties-common
+    state: latest
+  when: ansible_distribution in debian_oses
