@@ -7,7 +7,7 @@
       tags: always
       apt: update_cache=yes
       changed_when: False
-      when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
+      when: ansible_distribution in debian_oses
 
 # end of run cleanup and reporting
 - hosts: all
@@ -18,11 +18,11 @@
     apt:
       autoclean: yes
     changed_when: false
-    when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
+    when: ansible_distribution in debian_oses
 
   - name: autoremove orphan packages (debian and ubuntu)
     tags: always
     apt:
       autoremove: yes
       purge: yes
-    when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
+    when: ansible_distribution in debian_oses
