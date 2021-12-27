@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 URL=https://github.com/punchagan/ansible-system-setup.git
 
 # Install Ansible (ansible-pull) and Git
