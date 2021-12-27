@@ -9,6 +9,19 @@
       changed_when: False
       when: ansible_distribution in debian_oses
 
+# run roles
+- hosts: all
+  tags: base
+  become: true
+  roles:
+    - base
+
+- hosts: workstation
+  tags: workstation
+  become: true
+  roles:
+    - workstation
+
 # end of run cleanup and reporting
 - hosts: all
   become: true

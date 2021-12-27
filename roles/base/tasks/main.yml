@@ -1,0 +1,6 @@
+- name: Base main task
+  block:
+  - debug:
+      msg: "This is a stub task"
+  rescue:
+    - set_fact: task_failed=true
