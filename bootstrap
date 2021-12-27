@@ -2,7 +2,7 @@
 
 URL=https://github.com/punchagan/ansible-system-setup.git
 
-# Install Ansible (ansible-pull)
-which ansible-pull || (sudo apt update && sudo apt install -y ansible)
+# Install Ansible (ansible-pull) and Git
+(which ansible-pull && which git) || (sudo apt update && sudo apt install -y ansible git)
 
 ansible-pull -o -U "${URL}"
