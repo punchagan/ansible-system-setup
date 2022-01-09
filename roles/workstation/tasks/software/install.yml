@@ -15,3 +15,8 @@
       - firefox
     state: absent
   when: ansible_distribution in debian_oses
+
+- name: system setup | install | remove some pre-installed GUI software (debian-based, snaps)
+  community.general.snap:
+    name: firefox
+    state: absent
