@@ -1,4 +1,5 @@
 - name: user configuration | account service | use gnome-xorg session
+  tags: user,accounts,config
   community.general.ini_file:
     path: /var/lib/AccountsService/users/{{ username }}
     section: User
@@ -9,6 +10,7 @@
   when: ansible_distribution in debian_oses
 
 - name: user configuration | account service | use gnome xsession
+  tags: user,accounts,config
   community.general.ini_file:
     path: /var/lib/AccountsService/users/{{ username }}
     section: User

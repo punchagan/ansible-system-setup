@@ -1,5 +1,5 @@
 - name: system setup | install | install some basic GUI software (debian-based)
-  tags: packages,system,settings
+  tags: packages,gui
   package:
     name:
       - chromium-browser

@@ -1,7 +1,7 @@
 - name: user configuration | gnome | tweak all gnome settings
   include_role:
     name: petermosmans.customize-gnome
-  tags: extensions,settings,dconf,fonts,files
+  tags: extensions,settings,dconf,fonts,files,gnome
   vars:
     gnome_user: '{{ username }}'
     gnome_dconf:

@@ -1,5 +1,5 @@
 - name: system setup | repositories | install basic software (debian-based)
-  tags: packages,system,settings
+  tags: packages,terminal
   package:
     name:
       - emacs-nox
