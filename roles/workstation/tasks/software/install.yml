@@ -4,6 +4,7 @@
     name:
       - emacs
       - firefox-trunk
+      - gnome-shell
       - sqlitebrowser
       - terminator
       - thunderbird
