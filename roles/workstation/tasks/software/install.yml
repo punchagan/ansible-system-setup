@@ -2,6 +2,7 @@
   tags: packages,system,settings
   package:
     name:
+      - chromium-browser
       - emacs
       - firefox-trunk
       - gnome-session
