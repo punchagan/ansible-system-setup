@@ -2,6 +2,8 @@
   tags: packages,terminal
   package:
     name:
+      - docker
+      - docker-compose
       - emacs-nox
       - mosh
       - net-tools
