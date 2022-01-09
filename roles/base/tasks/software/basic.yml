@@ -2,11 +2,13 @@
   tags: packages,system,settings
   package:
     name:
-      - tmux
-      - mosh
-      - vim-nox
       - emacs-nox
-      - ssh
+      - mosh
       - net-tools
+      - silversearcher-ag
+      - sqlite3
+      - ssh
+      - tmux
+      - vim-nox
     state: latest
   when: ansible_distribution in debian_oses

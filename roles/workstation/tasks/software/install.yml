@@ -1,14 +1,17 @@
-- name: system setup | repositories | install some basic GUI software (debian-based)
+- name: system setup | install | install some basic GUI software (debian-based)
   tags: packages,system,settings
   package:
     name:
+      - emacs
       - firefox-trunk
+      - sqlitebrowser
+      - terminator
       - thunderbird
+      - vim
     state: latest
   when: ansible_distribution in debian_oses
 
-
-- name: system setup | repositories | remove some pre-installed GUI software (debian-based)
+- name: system setup | install | remove some pre-installed GUI software (debian-based)
   tags: packages,system,settings
   package:
     name:
