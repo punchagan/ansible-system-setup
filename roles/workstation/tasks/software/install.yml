@@ -1,0 +1,17 @@
+- name: system setup | repositories | install some basic GUI software (debian-based)
+  tags: packages,system,settings
+  package:
+    name:
+      - firefox-trunk
+      - thunderbird
+    state: latest
+  when: ansible_distribution in debian_oses
+
+
+- name: system setup | repositories | remove some pre-installed GUI software (debian-based)
+  tags: packages,system,settings
+  package:
+    name:
+      - firefox
+    state: absent
+  when: ansible_distribution in debian_oses

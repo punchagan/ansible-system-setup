@@ -1,0 +1,11 @@
+- name: system setup | repositories | add firefox nightly repo (debian-based)
+  tags: packages,system,settings
+  ansible.builtin.apt_repository:
+    repo: ppa:ubuntu-mozilla-daily/ppa
+  when: ansible_distribution in debian_oses
+
+- name: post repository setup | update package cache (debian-based)
+  tags: always
+  apt: update_cache=yes
+  changed_when: False
+  when: ansible_distribution in debian_oses

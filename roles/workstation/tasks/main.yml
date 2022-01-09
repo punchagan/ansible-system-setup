@@ -1,6 +1,7 @@
 - name: Workstation main task
   block:
-  - debug:
-      msg: "This is a stub task"
+  # install software
+  - import_tasks: software/repositories.yml
+  - import_tasks: software/install.yml
   rescue:
     - set_fact: task_failed=true
