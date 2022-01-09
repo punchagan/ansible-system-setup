@@ -1,0 +1,16 @@
+- name: user configuration | gnome | tweak all gnome settings
+  include_role:
+    name: petermosmans.customize-gnome
+  tags: extensions,settings,dconf,fonts,files
+  vars:
+    gnome_user: '{{ username }}'
+    gnome_dconf:
+      - key: /org/gnome/desktop/background/show-desktop-icons
+        value: "false"
+
+    gnome_extensions:
+      - id: 779  # Clipboard indicator
+        enable: yes
+
+      - id: 4144  # Vertical overview
+        enable: yes
