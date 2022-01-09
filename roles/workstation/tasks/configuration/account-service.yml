@@ -1,0 +1,19 @@
+- name: user configuration | account service | use gnome-xorg session
+  community.general.ini_file:
+    path: /var/lib/AccountsService/users/{{ username }}
+    section: User
+    option: Session
+    value: gnome-xorg
+    state: present
+    no_extra_spaces: true
+  when: ansible_distribution in debian_oses
+
+- name: user configuration | account service | use gnome xsession
+  community.general.ini_file:
+    path: /var/lib/AccountsService/users/{{ username }}
+    section: User
+    option: XSession
+    value: gnome
+    state: present
+    no_extra_spaces: true
+  when: ansible_distribution in debian_oses
