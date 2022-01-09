@@ -3,6 +3,7 @@
 
   # install software
   - import_tasks: software/repositories.yml
+  - import_tasks: software/basic.yml
 
   rescue:
     - set_fact: task_failed=true

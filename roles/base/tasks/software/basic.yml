@@ -1,0 +1,12 @@
+- name: system setup | repositories | install basic software (debian-based)
+  tags: packages,system,settings
+  package:
+    name:
+      - tmux
+      - mosh
+      - vim-nox
+      - emacs-nox
+      - ssh
+      - net-tools
+    state: latest
+  when: ansible_distribution in debian_oses
