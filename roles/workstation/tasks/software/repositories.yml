@@ -2,10 +2,5 @@
   tags: packages,repositories
   ansible.builtin.apt_repository:
     repo: ppa:ubuntu-mozilla-daily/ppa
-  when: ansible_distribution in debian_oses
-
-- name: post repository setup | update package cache (debian-based)
-  tags: packages,repositories
-  apt: update_cache=yes
-  changed_when: False
+    update_cache: true
   when: ansible_distribution in debian_oses
