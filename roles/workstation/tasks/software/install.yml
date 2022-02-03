@@ -9,6 +9,8 @@
       - gnome-session
       - gnome-shell
       - gnome-tweaks
+      - redshift
+      - redshift-gtk
       - sqlitebrowser
       - terminator
       - thunderbird
