@@ -1,5 +1,5 @@
 # tasks to complete before running roles
-- hosts: all
+- hosts: all:!personal
   tags: always
   become: true
   pre_tasks:
@@ -10,7 +10,7 @@
       when: ansible_distribution in debian_oses
 
 # run roles
-- hosts: all
+- hosts: all:!personal
   tags: base
   become: true
   roles:
@@ -22,8 +22,18 @@
   roles:
     - workstation
 
+- hosts: personal
+  tags: personal
+  become: true
+  roles:
+    # NOTE: workstation is commented since personal laptop isn't a fresh setup,
+    # and could break many things. Uncomment when running on a fresh laptop
+
+    # - workstation
+    - personal
+
 # end of run cleanup and reporting
-- hosts: all
+- hosts: all:!personal
   become: true
   tasks:
   - name: cleanup package cache (debian and ubuntu)
