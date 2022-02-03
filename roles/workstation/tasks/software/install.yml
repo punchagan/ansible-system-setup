@@ -4,6 +4,7 @@
     name:
       - chromium-browser
       - emacs
+      - emacs-gtk
       - firefox-trunk
       - gnome-session
       - gnome-shell
