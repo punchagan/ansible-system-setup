@@ -11,12 +11,24 @@ URL=https://github.com/punchagan/ansible-system-setup.git
 # NOTE: Ensure it is the same as the log path in ansible.cfg
 mkdir -p ~/.local/var/log/
 
-ansible-galaxy install petermosmans.customize-gnome
-ansible-pull --only-if-changed --url "${URL}" --ask-become-pass "$@"
 
-# Enable Gnome extensions after restarting Gnome Shell
-busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart("Restarting…")'
+function bootstrap () {
+    ansible-galaxy install petermosmans.customize-gnome
+    ansible-pull --only-if-changed --url "${URL}" --ask-become-pass
 
-# There are no tags that we can use to list and install gnome extensions alone.
-# So, we skip all other tags, here.
-ansible-pull --url "${URL}" --skip-tags packages,config
+    # Enable Gnome extensions after restarting Gnome Shell
+    busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart("Restarting…")'
+
+    # There are no tags that we can use to list and install gnome extensions alone.
+    # So, we skip all other tags, here.
+    ansible-pull --url "${URL}" --skip-tags packages,config
+}
+
+if [[ -z "$@" ]];
+then
+    bootstrap
+else
+    echo "Extra args supplied."
+    echo "Running only pull with exta args:- $@"
+    ansible-pull --url "${URL}" "$@"
+fi
