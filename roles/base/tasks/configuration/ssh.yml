@@ -1,0 +1,8 @@
+- name: user configuration | ssh | generate openssh keypair
+  tags: user,ssh,config
+  openssh_keypair:
+    path: "/home/{{ username }}/.ssh/id_rsa"
+    type: rsa
+    size: 4096
+    state: present
+    force: no

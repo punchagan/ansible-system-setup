@@ -5,5 +5,8 @@
   - import_tasks: software/repositories.yml
   - import_tasks: software/install.yml
 
+  # run configuration
+  - import_tasks: configuration/ssh.yml
+
   rescue:
     - set_fact: task_failed=true
