@@ -1,0 +1,4 @@
+- name: system setup | install | install some TUI software (debian-based, snaps)
+  community.general.snap:
+    name:
+      - hugo
