@@ -1,3 +1,8 @@
+- name: user configuration | ssh | create .ssh directory
+  file:
+    path: "/home/{{ username }}/.ssh/"
+    state: directory
+
 - name: user configuration | ssh | generate openssh keypair
   tags: user,ssh,config
   openssh_keypair:
