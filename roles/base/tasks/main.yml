@@ -6,6 +6,7 @@
   - import_tasks: software/install.yml
 
   # run configuration
+  - import_tasks: configuration/user-groups.yml
   - import_tasks: configuration/ssh.yml
 
   rescue:
