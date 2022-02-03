@@ -5,6 +5,7 @@
       - docker
       - docker-compose
       - emacs-nox
+      - make
       - mosh
       - net-tools
       - silversearcher-ag
