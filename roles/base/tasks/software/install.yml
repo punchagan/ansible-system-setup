@@ -9,6 +9,7 @@
       - make
       - mosh
       - net-tools
+      - opam
       - silversearcher-ag
       - sqlite3
       - ssh
