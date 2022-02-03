@@ -18,7 +18,7 @@
     state: latest
   when: ansible_distribution in debian_oses
 
-- name: system setup | install | install some GUI software using classic flag (debian-based, snaps)
+- name: system setup | install | install some GUI software using CLASSIC flag (debian-based, snaps)
   community.general.snap:
     name:
       - code  # vscode
