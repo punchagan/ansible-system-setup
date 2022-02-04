@@ -1,11 +1,11 @@
-- name: DNS configuration | nameservers | use Cloudfront DNS
+- name: DNS configuration | nameservers | use Cloudflare DNS
   tags: dns,config
   copy:
     dest: "{{ item }}"
     content: |
       nameserver 1.1.1.1
       nameserver 1.0.0.1
-    with_items:
+  loop:
     - /etc/resolv.conf.cf
     - /etc/resolv.conf
   when: ansible_distribution in debian_oses
