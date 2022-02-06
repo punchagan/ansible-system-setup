@@ -8,6 +8,7 @@
   - import_tasks: configuration/account-service.yml
   - import_tasks: configuration/gnome.yml
   - import_tasks: configuration/nameservers.yml
+  - import_tasks: configuration/repos.yml
 
   rescue:
     - set_fact: task_failed=true
