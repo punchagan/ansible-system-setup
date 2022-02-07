@@ -9,6 +9,7 @@
   loop:
     - ansible-system-setup
     - dot-emacs
+    - zulip-helpers.el
 
 
 - name: Emacs configuration | repos | Setup .emacs
