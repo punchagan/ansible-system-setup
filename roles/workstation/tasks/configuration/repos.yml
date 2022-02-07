@@ -9,3 +9,11 @@
   loop:
     - ansible-system-setup
     - dot-emacs
+
+
+- name: Emacs configuration | repos | Setup .emacs
+  tags: repos,emacs
+  ansible.builtin.file:
+    src: /home/{{ username }}/code/my-repos/dot-emacs
+    dest: /home/{{ username }}/.emacs.d
+    state: link
