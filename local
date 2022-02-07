@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Script to run the ansible pull on the local system
+
+set -euo pipefail
+
+URL="file://${PWD}"
+
+# Install Ansible (ansible-pull) and Git
+(which ansible-pull && which git) || (sudo apt update && sudo apt install -y ansible git)
+
+# Create ansible log directory
+# NOTE: Ensure it is the same as the log path in ansible.cfg
+mkdir -p ~/.local/var/log/
+
+ansible-pull --url "${URL}" --ask-become-pass "$@"
