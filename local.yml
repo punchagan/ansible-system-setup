@@ -12,19 +12,16 @@
 # run roles
 - hosts: all:!personal
   tags: base
-  become: true
   roles:
     - base
 
 - hosts: workstation
   tags: workstation
-  become: true
   roles:
     - workstation
 
 - hosts: personal
   tags: personal
-  become: true
   roles:
     # NOTE: workstation is commented since personal laptop isn't a fresh setup,
     # and could break many things. Uncomment when running on a fresh laptop

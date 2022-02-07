@@ -3,10 +3,13 @@
 
   # install software
   - import_tasks: software/repositories.yml
+    become: true
   - import_tasks: software/install.yml
+    become: true
 
   # run configuration
   - import_tasks: configuration/user-groups.yml
+    become: true
   - import_tasks: configuration/ssh.yml
 
   rescue:
