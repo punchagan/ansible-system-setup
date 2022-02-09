@@ -2,6 +2,7 @@
   tags: packages,terminal
   package:
     name:
+      - curl
       - docker
       - docker-compose
       - emacs-nox
