@@ -5,6 +5,7 @@
       - chromium-browser
       - emacs
       - emacs-gtk
+      - feh
       - firefox-trunk
       - gnome-session
       - gnome-shell
