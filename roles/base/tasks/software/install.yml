@@ -5,6 +5,7 @@
       - docker
       - docker-compose
       - emacs-nox
+      - htop
       - jq
       - make
       - mosh
