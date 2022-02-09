@@ -17,5 +17,6 @@
       - ssh
       - tmux
       - vim-nox
+      - visidata
     state: latest
   when: ansible_distribution in debian_oses
