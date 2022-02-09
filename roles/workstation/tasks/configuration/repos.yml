@@ -8,6 +8,7 @@
     clone: yes
   loop:
     - ansible-system-setup
+    - dotfiles
     - dot-emacs
     - zulip-helpers.el
 
