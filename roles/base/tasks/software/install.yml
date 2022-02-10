@@ -12,6 +12,7 @@
       - mosh
       - net-tools
       - opam
+      - python-is-python3
       - silversearcher-ag
       - sqlite3
       - ssh
