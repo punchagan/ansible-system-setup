@@ -13,6 +13,7 @@
       - net-tools
       - opam
       - python-is-python3
+      - python3-venv
       - silversearcher-ag
       - sqlite3
       - ssh
