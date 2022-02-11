@@ -2,16 +2,16 @@
   tags: repos,git
   ignore_errors: yes
   ansible.builtin.git:
-    repo: "git@github.com:{{ git_username }}/{{ item }}.git"
-    dest: /home/{{ username }}/code/my-repos/{{ item }}
+    repo: "git@github.com:{{ git_username }}/{{ item.name }}.git"
+    dest: /home/{{ username }}/code/my-repos/{{ item.name }}
     update: no
+    bare: "{{ item.bare | default(false) }}"
     clone: yes
   loop:
-    - ansible-system-setup
-    - dotfiles
-    - dot-emacs
-    - zulip-helpers.el
-
+    - {"name": "ansible-system-setup"}
+    - {"name": "dotfiles", "bare": true}
+    - {"name": "dot-emacs"}
+    - {"name": "zulip-helpers.el"}
 
 - name: Emacs configuration | repos | Setup .emacs
   tags: repos,emacs
