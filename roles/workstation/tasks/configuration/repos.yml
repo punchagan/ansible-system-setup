@@ -12,8 +12,8 @@
     - {"name": "dot-emacs"}
     - {"name": "zulip-helpers.el"}
 
-- name: Code configuration | repos | Clone repos from Github (miscellaneous)
-  tags: repos,git
+- name: Code configuration | repos | Clone bashit from Github
+  tags: repos,git,bashit
   ansible.builtin.git:
     repo: "git@github.com:{{ item.remote }}"
     dest: "{{ code_dir }}/misc/{{ item.name }}"
