@@ -11,3 +11,13 @@
     - {"name": "dotfiles", "bare": true}
     - {"name": "dot-emacs"}
     - {"name": "zulip-helpers.el"}
+
+- name: Code configuration | repos | Clone repos from Github (miscellaneous)
+  tags: repos,git
+  ansible.builtin.git:
+    repo: "git@github.com:{{ item.remote }}"
+    dest: "{{ code_dir }}/misc/{{ item.name }}"
+    update: no
+    clone: yes
+  loop:
+    - {"name": "bash-it", "remote": "Bash-it/bash-it.git"}

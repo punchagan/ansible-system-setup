@@ -19,3 +19,8 @@
     git --work-tree={{ home_dir }} --git-dir={{ code_dir }}/my-repos/dotfiles/ config core.bare false
     git --work-tree={{ home_dir }} --git-dir={{ code_dir }}/my-repos/dotfiles/ checkout || echo "Checkout exists"
     git --work-tree={{ home_dir }} --git-dir={{ code_dir }}/my-repos/dotfiles/ reset
+
+- name: bash-it configuration | dotfiles | Run the bash_it install script
+  tags: dotfiles
+  ansible.builtin.shell:
+    cmd: "{{ code_dir }}/misc/bash-it/install.sh --no-modify-config"
