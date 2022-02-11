@@ -2,4 +2,5 @@
 debian_oses: ["Debian", "Ubuntu", "Pop!_OS"]
 username: "punchagan"
 home_dir: "/home/{{ username }}"
+code_dir: "{{ home_dir }}/code"
 git_username: "punchagan"

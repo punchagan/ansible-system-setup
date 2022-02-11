@@ -2,7 +2,7 @@
   tags: repos,git
   ansible.builtin.git:
     repo: "git@github.com:{{ git_username }}/{{ item.name }}.git"
-    dest: "{{ home_dir }}/code/my-repos/{{ item.name }}"
+    dest: "{{ code_dir }}/my-repos/{{ item.name }}"
     update: no
     bare: "{{ item.bare | default(false) }}"
     clone: yes
