@@ -3,6 +3,7 @@
   package:
     name:
       - curl
+      - direnv
       - docker
       - docker-compose
       - emacs-nox
