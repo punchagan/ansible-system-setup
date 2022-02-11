@@ -7,6 +7,8 @@
       - docker
       - docker-compose
       - emacs-nox
+      - fasd
+      - fzf
       - htop
       - jq
       - make
