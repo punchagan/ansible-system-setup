@@ -1,0 +1,22 @@
+- name: Emacs configuration | dotfiles | Setup .emacs
+  tags: dotfiles,emacs
+  ansible.builtin.file:
+    src: /home/{{ username }}/code/my-repos/dot-emacs
+    dest: /home/{{ username }}/.emacs.d
+    state: link
+
+- name: Dotfiles configuration git worktree setup | dotfiles | Setup .git file
+  tags: dotfiles
+  copy:
+    dest: "{{ home_dir }}/.git"
+    content: |
+      gitdir: {{ home_dir }}/code/my-repos/dotfiles/
+
+- name: Dotfiles configuration | dotfiles | Change some configuration in `dotfiles` clone
+  tags: dotfiles
+  ansible.builtin.shell: |
+    # Required to use $HOME like a normal repo
+    git --work-tree={{ home_dir }} --git-dir={{ home_dir }}/code/my-repos/dotfiles/ config core.bare false
+    git --work-tree={{ home_dir }} --git-dir={{ home_dir }}/code/my-repos/dotfiles/ checkout || echo "Checkout exists"
+
+    git --work-tree={{ home_dir }} --git-dir={{ home_dir }}/code/my-repos/dotfiles/ reset

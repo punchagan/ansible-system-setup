@@ -13,6 +13,7 @@
   - import_tasks: configuration/nameservers.yml
     become: true
   - import_tasks: configuration/repos.yml
+  - import_tasks: configuration/dotfiles.yml
 
   rescue:
     - set_fact: task_failed=true
