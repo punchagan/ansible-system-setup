@@ -1,6 +1,5 @@
 - name: Code configuration | repos | Clone repos from Github (personal)
   tags: repos,git
-  ignore_errors: yes
   ansible.builtin.git:
     repo: "git@github.com:{{ git_username }}/{{ item.name }}.git"
     dest: "{{ home_dir }}/code/my-repos/{{ item.name }}"
