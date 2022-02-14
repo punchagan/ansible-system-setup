@@ -4,3 +4,10 @@
     repo: ppa:ubuntu-mozilla-daily/ppa
     update_cache: true
   when: ansible_distribution in debian_oses
+
+- name: system setup | repositories | add workrave repo (debian-based)
+  tags: packages,repositories
+  ansible.builtin.apt_repository:
+    repo: ppa:rob-caelers/workrave
+    update_cache: true
+  when: ansible_distribution in debian_oses

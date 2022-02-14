@@ -16,6 +16,7 @@
       - terminator
       - thunderbird
       - vim
+      - workrave-gnome
     state: latest
   when: ansible_distribution in debian_oses
 

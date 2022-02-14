@@ -29,3 +29,8 @@
 
       - id: 4144  # Vertical overview
         enable: yes
+
+- name: Gnome shell configuration | gnome | Enable workrave extension
+  tags: dotfiles
+  ansible.builtin.shell: gnome-extensions enable workrave@workrave.org
+  when: ansible_distribution in debian_oses
