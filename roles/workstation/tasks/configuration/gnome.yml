@@ -20,6 +20,9 @@
       - key: /org/gnome/desktop/calendar/show-weekdate
         value: "true"
 
+      - key: /org/gnome/desktop/interface/show-battery-percentage
+        value: "true"
+
     gnome_extensions:
       - id: 779  # Clipboard indicator
         enable: yes
