@@ -21,7 +21,7 @@ function bootstrap () {
 
     # There are no tags that we can use to list and install gnome extensions alone.
     # So, we skip all other tags, here.
-    ansible-pull --url "${URL}" --skip-tags packages,config
+    ansible-pull --url "${URL}" --skip-tags packages,config,repos,dotfiles
 }
 
 if [[ -z "$@" ]];
