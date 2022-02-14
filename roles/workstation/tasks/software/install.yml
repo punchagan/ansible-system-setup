@@ -24,6 +24,8 @@
     name:
       - code  # vscode
     classic: yes
+  when: ansible_distribution in debian_oses
+
 - name: system setup | install | install some TUI software (debian-based, snaps)
   community.general.snap:
     name:
@@ -42,3 +44,4 @@
   community.general.snap:
     name: firefox
     state: absent
+  when: ansible_distribution in debian_oses
