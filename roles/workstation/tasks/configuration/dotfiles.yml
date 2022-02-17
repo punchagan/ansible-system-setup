@@ -20,12 +20,12 @@
     git --work-tree={{ home_dir }} --git-dir={{ code_dir }}/my-repos/dotfiles/ checkout || echo "Checkout exists"
     git --work-tree={{ home_dir }} --git-dir={{ code_dir }}/my-repos/dotfiles/ reset
 
-- name: bash-it profile | dotfiles | Hard link the bash_it profile file
+- name: bash-it profile | dotfiles | Link profile bash-it/profiles dir
   tags: dotfiles,bashit
   ansible.builtin.file:
-    src: "{{ home_dir }}/.config/{{ username }}.bash_it"
-    dest: "{{ code_dir }}/misc/bash-it/profiles/"
-    state: hard
+    src: "{{ home_dir }}/.config/bash-it/profiles/{{ username }}.bash_it"
+    dest: "{{ code_dir }}/misc/bash-it/profiles/{{ username }}.bash_it"
+    state: link
 
 - name: bash-it configuration | dotfiles | Run the bash_it install script (and enable profile)
   tags: dotfiles,bashit
