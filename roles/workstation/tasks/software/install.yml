@@ -25,6 +25,7 @@
   when: ansible_distribution in debian_oses
 
 - name: system setup | install | install some GUI software using CLASSIC flag (debian-based, snaps)
+  tags: packages,gui
   community.general.snap:
     name:
       - code  # vscode
@@ -32,13 +33,14 @@
   when: ansible_distribution in debian_oses
 
 - name: system setup | install | install some TUI software (debian-based, snaps)
+  tags: packages,gui
   community.general.snap:
     name:
       - git-standup
   when: ansible_distribution in debian_oses
 
 - name: system setup | install | remove some pre-installed GUI software (debian-based)
-  tags: packages,system,settings
+  tags: packages,gui
   package:
     name:
       - firefox
@@ -46,6 +48,7 @@
   when: ansible_distribution in debian_oses
 
 - name: system setup | install | remove some pre-installed GUI software (debian-based, snaps)
+  tags: packages,gui
   community.general.snap:
     name: firefox
     state: absent
