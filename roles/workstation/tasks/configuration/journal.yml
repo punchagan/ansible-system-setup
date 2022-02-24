@@ -1,7 +1,15 @@
-- name: Life in plain-text configuration | repos | Clone life-in-plain-text from muse-amuse
+- name: life-in-plain-text configuration | journal | Clone life-in-plain-text from muse-amuse
   tags: notes,journal,git
   ansible.builtin.git:
     repo: "{{ username }}@muse-amuse.in:~/repos/.life-in-plain-text.git"
     dest: "{{ home_dir }}/.life-in-plain-text/"
     update: no
     clone: yes
+
+- name: life-in-plain-text configuration | journal | Setup cron to backup life-in-plain-text
+  tags: notes,journal,cron
+  ansible.builtin.cron:
+    name: "backup life-in-plain-text"
+    minute: "0"
+    hour: "*"
+    job: "/home/{{ username }}/.life-in-plain-text/backup.sh > /home/{{ username }}/.lipt.backup.log 2>&1"
