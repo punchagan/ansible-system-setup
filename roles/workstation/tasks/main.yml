@@ -14,6 +14,7 @@
     become: true
   - import_tasks: configuration/repos.yml
   - import_tasks: configuration/dotfiles.yml
+  - import_tasks: configuration/journal.yml
 
   rescue:
     - set_fact: task_failed=true

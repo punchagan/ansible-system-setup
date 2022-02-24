@@ -1,0 +1,7 @@
+- name: Life in plain-text configuration | repos | Clone life-in-plain-text from muse-amuse
+  tags: notes,journal,git
+  ansible.builtin.git:
+    repo: "{{ username }}@muse-amuse.in:~/repos/.life-in-plain-text.git"
+    dest: "{{ home_dir }}/.life-in-plain-text/"
+    update: no
+    clone: yes
