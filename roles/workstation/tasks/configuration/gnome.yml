@@ -43,7 +43,7 @@
         value: "\\'<Shift><Super>j\\'"
 
       - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-capture/command
-        value: "\\'/home/punchagan/bin/journal-capture.sh\\'"
+        value: "\\'/home/punchagan/bin/journal.sh\\ journal\\'"
 
       ## Journal Show
       - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-show/name
@@ -63,7 +63,7 @@
         value: "\\'<Super>c\\'"
 
       - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-clock/command
-        value: "\\'/home/punchagan/bin/journal-clock.sh\\'"
+        value: "\\'/home/punchagan/bin/journal.sh\\ clock\\'"
 
 
     gnome_extensions:
