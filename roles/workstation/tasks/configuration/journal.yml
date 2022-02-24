@@ -13,3 +13,5 @@
     minute: "0"
     hour: "*"
     job: "/home/{{ username }}/.life-in-plain-text/backup.sh > /home/{{ username }}/.lipt.backup.log 2>&1"
+
+# NOTE: See workstation/tasks/configuration/gnome.yml for keybindings setup

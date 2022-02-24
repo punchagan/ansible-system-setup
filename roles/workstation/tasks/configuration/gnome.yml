@@ -30,6 +30,42 @@
       - key: /org/gnome/settings-daemon/plugins/power/lid-close-suspend-with-external-monitor
         value: "false"
 
+      # Custom keybindings
+      # NOTE: Needs Gnome shell to be restarted after this!
+      - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings
+        value: "[\\'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-capture/\\',\\ \\'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-show/\\',\\ \\'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-clock/\\']"
+
+      ## Journal Capture
+      - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-capture/name
+        value: "\\'journal-capture\\'"
+
+      - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-capture/binding
+        value: "\\'<Shift><Super>j\\'"
+
+      - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-capture/command
+        value: "\\'/home/punchagan/bin/journal-capture.sh\\'"
+
+      ## Journal Show
+      - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-show/name
+        value: "\\'journal-show\\'"
+
+      - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-show/binding
+        value: "\\'<Super>j\\'"
+
+      - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-show/command
+        value: "\\'/home/punchagan/bin/journal.sh\\'"
+
+      ## Journal Clock
+      - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-clock/name
+        value: "\\'journal-clock\\'"
+
+      - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-clock/binding
+        value: "\\'<Super>c\\'"
+
+      - key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/journal-clock/command
+        value: "\\'/home/punchagan/bin/journal-clock.sh\\'"
+
+
     gnome_extensions:
       - id: 779  # Clipboard indicator
         enable: yes
