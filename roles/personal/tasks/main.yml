@@ -4,6 +4,7 @@
   # install software
   - import_tasks: software/install.yml
     become: true
+  - import_tasks: configuration/syncthing.yml
 
   rescue:
     - set_fact: task_failed=true

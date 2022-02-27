@@ -1,0 +1,9 @@
+# Setup syncthing
+---
+- name: syncthing setup | syncthing | Enable & start systemd service
+  tags: syncthing
+  ansible.builtin.systemd:
+    name: syncthing.service
+    state: started
+    enabled: true
+    scope: user

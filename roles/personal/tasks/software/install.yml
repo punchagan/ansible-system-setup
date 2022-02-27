@@ -1,4 +1,13 @@
+---
 - name: system setup | install | install some TUI software (debian-based, snaps)
   community.general.snap:
     name:
       - hugo
+
+- name: system setup | repositories | install software (debian-based)
+  tags: packages
+  package:
+    name:
+      - syncthing
+    state: latest
+  when: ansible_distribution in debian_oses
