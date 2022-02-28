@@ -8,6 +8,7 @@
       - docker-compose
       - emacs-nox
       - fasd
+      - fd-find
       - fzf
       - htop
       - jq
