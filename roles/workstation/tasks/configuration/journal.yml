@@ -12,6 +12,13 @@
     name: "backup life-in-plain-text"
     minute: "0"
     hour: "*"
-    job: "/home/{{ username }}/.life-in-plain-text/backup.sh > /home/{{ username }}/.lipt.backup.log 2>&1"
+    job: "{{ home_dir }}/.life-in-plain-text/backup.sh > {{ home_dir }}/.lipt.backup.log 2>&1"
+
+- name: life-in-plain-text configuration | journal | Setup link to run backup quickly
+  tags: notes,journal
+  ansible.builtin.file:
+    src: "{{ home_dir }}/.life-in-plain-text/backup.sh"
+    dest: "{{ home_dir }}/bin/journal-backup"
+    state: link
 
 # NOTE: See workstation/tasks/configuration/gnome.yml for keybindings setup
