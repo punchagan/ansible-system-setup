@@ -34,3 +34,10 @@
     bash-it profile load {{ username }}
   args:
     executable: /bin/bash
+
+- name: user applications configuration | dotfiles | Build cache database of MIME types handled by desktop files
+  tags: dotfiles
+  ansible.builtin.shell: |
+    update-desktop-database {{ home_dir }}/.local/share/applications/
+  args:
+    executable: /bin/bash
