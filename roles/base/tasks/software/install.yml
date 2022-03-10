@@ -15,6 +15,7 @@
       - make
       - mosh
       - net-tools
+      - nmap
       - opam
       - python3-venv
       - python-is-python3
