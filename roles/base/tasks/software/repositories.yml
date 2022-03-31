@@ -19,3 +19,10 @@
     state: present
     update_cache: true
   when: ansible_distribution in ["Debian", "Ubuntu"]
+
+- name: system setup | repositories | add opam stable repo (debian-based)
+  tags: packages,repositories
+  ansible.builtin.apt_repository:
+    repo: ppa:avsm/ppa
+    update_cache: true
+  when: ansible_distribution in debian_oses
