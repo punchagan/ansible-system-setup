@@ -27,5 +27,6 @@
       - tmux
       - vim-nox
       - visidata
+      - yamllint
     state: latest
   when: ansible_distribution in debian_oses
