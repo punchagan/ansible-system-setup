@@ -11,7 +11,7 @@
     - {"name": "dotfiles", "bare": true}
     - {"name": "dot-emacs"}
     - {"name": "zulip-helpers.el"}
-    - {"name": "org2gist"}
+    - {"name": "ox-gist"}
 
 - name: Code configuration | repos | Clone bashit from Github
   tags: repos,git,bashit
