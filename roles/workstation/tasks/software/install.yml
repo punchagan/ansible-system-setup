@@ -12,6 +12,7 @@
       - gnome-session
       - gnome-shell
       - gnome-tweaks
+      - mpv
       - redshift
       - redshift-gtk
       - sqlitebrowser
