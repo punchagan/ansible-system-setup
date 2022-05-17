@@ -30,3 +30,11 @@
       - yamllint
     state: latest
   when: ansible_distribution in debian_oses
+
+- name: Install hyperfine | repositories | install hyperfine (debian-based)
+  tags: packages,terminal
+  ansible.builtin.shell: |
+    cd /tmp; wget https://github.com/sharkdp/hyperfine/releases/download/v1.13.0/hyperfine_1.13.0_amd64.deb
+    dpkg -i hyperfine_1.13.0_amd64.deb
+  args:
+    executable: /bin/bash
