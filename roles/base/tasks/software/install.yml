@@ -12,6 +12,8 @@
       - fzf
       - htop
       - jq
+      - linux-tools-common
+      - linux-tools-generic
       - make
       - mosh
       - net-tools
