@@ -40,3 +40,11 @@
     dpkg -i hyperfine_1.13.0_amd64.deb
   args:
     executable: /bin/bash
+
+- name: Install Poetry | repositories | install hyperfine (debian-based)
+  tags: packages,terminal
+  ansible.builtin.shell: |
+    cd /tmp
+    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+  args:
+    executable: /bin/bash
