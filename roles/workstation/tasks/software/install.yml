@@ -27,18 +27,26 @@
   when: ansible_distribution in debian_oses
 
 - name: system setup | install | install some GUI software using CLASSIC flag (debian-based, snaps)
-  tags: packages,gui
+  tags: packages,gui,classic
   community.general.snap:
     name:
       - code  # vscode
-    classic: yes
+    classic: true
   when: ansible_distribution in debian_oses
 
 - name: system setup | install | install some TUI software (debian-based, snaps)
-  tags: packages,gui
+  tags: packages,tui
   community.general.snap:
     name:
       - git-standup
+  when: ansible_distribution in debian_oses
+
+- name: system setup | install | install some TUI software using CLASSIC flag (debian-based, snaps)
+  tags: packages,tui,classic
+  community.general.snap:
+    name:
+      - heroku
+    classic: true
   when: ansible_distribution in debian_oses
 
 - name: system setup | install | install prettier from beta channel
