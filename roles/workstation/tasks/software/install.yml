@@ -23,6 +23,7 @@
       - workrave-gnome
       - xclip
       - xdotool
+      - vagrant
     state: latest
   when: ansible_distribution in debian_oses
 
