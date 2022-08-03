@@ -10,7 +10,7 @@
   tags: notes,journal,cron
   ansible.builtin.cron:
     name: "backup life-in-plain-text"
-    minute: "0"
+    minute: "0,15,30,45"
     hour: "*"
     job: "{{ home_dir }}/.life-in-plain-text/backup.sh > {{ home_dir }}/.lipt.backup.log 2>&1"
 
