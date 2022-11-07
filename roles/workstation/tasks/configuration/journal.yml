@@ -14,16 +14,6 @@
     hour: "*"
     job: "{{ home_dir }}/.life-in-plain-text/backup.sh > {{ home_dir }}/.lipt.backup.log 2>&1"
 
-- name: life-in-plain-text configuration | journal | Setup cron to sync life-in-plain-text to mobile
-  tags: notes,journal,cron,mobile
-  ansible.builtin.cron:
-    name: "sync life-in-plain-text to mobile"
-    minute: "2,17,32,47"
-    hour: "*"
-    job: "{{ home_dir }}/bin/mobile-git-sync > {{ home_dir }}/.lipt.mobile-sync.log 2>&1"
-    state: present
-    disabled: yes
-
 - name: life-in-plain-text configuration | journal | Setup link to run backup quickly
   tags: notes,journal
   ansible.builtin.file:
