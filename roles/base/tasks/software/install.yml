@@ -22,6 +22,7 @@
       - opam
       - p7zip-full
       - pandoc
+      - pass
       - python3-venv
       - python-is-python3
       - shellcheck
