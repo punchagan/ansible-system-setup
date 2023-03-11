@@ -39,6 +39,7 @@
   tags: packages,tui
   community.general.snap:
     name:
+      - hugo
       - git-standup
       - yq
   when: ansible_distribution in debian_oses
