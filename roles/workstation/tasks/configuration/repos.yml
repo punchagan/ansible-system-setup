@@ -14,14 +14,11 @@
     - {"name": "punchagan.muse-amuse.in"}
     - {"name": "ox-gist"}
 
-- name: Add second url to blog repo | repos | Push to muse-amuse.in
+- name: Setup blog repo | repos | Run punchagan.muse-amuse.in setup script
   tags: repos,git
   ansible.builtin.shell: |
     cd "{{ code_dir }}/my-repos/punchagan.muse-amuse.in"
-    git remote remove origin
-    git remote add origin muse-amuse.in:~/repos/muse-amuse.in.git
-    git remote set-url --add --push origin muse-amuse.in:~/repos/muse-amuse.in.git
-    git remote set-url --add --push origin "git@github.com:{{ git_username }}/punchagan.muse-amuse.in.git"
+    ./setup.sh
 
 - name: Code configuration | repos | Clone bashit from Github
   tags: repos,git,bashit
