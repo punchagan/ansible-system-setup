@@ -11,6 +11,7 @@
     - {"name": "dotfiles", "bare": true}
     - {"name": "dot-emacs"}
     - {"name": "zulip-helpers.el"}
+    - {"name": "punchagan.muse-amuse.in"}
     - {"name": "ox-gist"}
 
 - name: Code configuration | repos | Clone bashit from Github
