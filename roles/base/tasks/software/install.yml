@@ -12,6 +12,7 @@
       - fd-find
       - fzf
       - htop
+      - jo
       - jq
       - linux-tools-common
       - linux-tools-generic
