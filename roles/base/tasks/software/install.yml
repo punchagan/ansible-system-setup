@@ -2,6 +2,7 @@
   tags: packages,terminal
   package:
     name:
+      - bat
       - curl
       - direnv
       - docker
