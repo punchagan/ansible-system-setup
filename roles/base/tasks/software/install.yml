@@ -12,6 +12,7 @@
       - fasd
       - fd-find
       - fzf
+      - gh
       - htop
       - jo
       - jq
